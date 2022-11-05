@@ -1,0 +1,91 @@
+codes are generally written by Developers 
+  Developers write codes in languages like:
+    java, javascript, python, nodeJS, PHP, C++, C, REACT.js, .net 
+
+    Version Control systems:
+  - Local [using your own computer/system]
+       Developers write and save codes in their local-Computers 
+  - Centralised: cental server is owned an manged by the client. not very reliable
+  - Distributed: here we use a source code manager github which is very reliable.
+Git and GitHub
+
+GIT: DVCs 
+  Distributed Version Control system: 
+  - Git manage data as snapshots.
+  - It takes a picture of what all your files look like
+   at that moment and stores 
+    a reference to that snapshot.
+  Benefits: Nearly every operation is local
+            git has data intergrity
+            Git generally only adds data
+            it helps to avoid repetition
+  other DVCs:
+SVN --> Sub Version
+CVS --> Concurrent Version system
+TFS --> Team Foundation Server
+Git --> 90% plus of companies are using GI
+
+Source Code Management = SCM:
+        GitHub - MS *** we use GitHub in landmarktech
+        GitLab
+        BitBucket (Stash) - A
+
+IQ: As a DevOps Engineer, what are your roles & responsilities in Git?
+Answer:
+  1. Ensure that Developers environments are configured and secured 
+     Create an enabling environment for Developers
+  2. Project Onboarding 
+       Create organisations where applicable 
+       Create repositories in SCM [GitHub] 
+       Create teams in SCM and assign members[Developers, etc.] 
+  3. Create a Team 
+    https://github.com/orgs/landmarkdevops28/teams/tesla-app  
+      tesla-app 
+      tesla_dev  
+
+  4. Add users to the team
+
+  5. Provide/Grant repo access to the team
+   least privileges to team members   
+
+Pre Requisite Software Download/ Registration :
+Install git in Windows   :  
+  Install git bash @ https://git-scm.com/downloads
+
+Install in RedHAT Linux servers:
+    Install git in git -y 
+-----------------------------------------------------------
+it Commands:
+  git status 
+  git init 
+  git add 
+mkdir newgit
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+# We will need to initialize the directory and bring it under the management of git:
+git init
+
+configuring the git git with GitHub:
+git config --global user.name "gilankia"
+git config --global user.email "jasonmysons@gmail.com"
+git config --global --list
+
+git init 
+  
+  git begins track and keep records[versions]
+  of changes made in the codes
+git status 
+  to see the status of the files
+git add  
+  
+git commit 
+git log 
+   list all the commits and who committed 
+git show Cid  
+   show all the changes of the commits
+==============================
+When we run "git commit" the code is  
+  moved to the Local repository
+
+git push  -- moves code from localRepo
+             to Remote-Repo 

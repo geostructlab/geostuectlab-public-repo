@@ -1,0 +1,216 @@
+Linux File Structure:
+    /  is the root Directory in Linux servers *##
+
+/home - user's home Directory details 
+======
+ec2-user 
+mylandmarktech 
+simon 
+linux  
+
+/bin = contains binary files [commands]
+=====
+  ls 
+  pwd = print working Directory 
+  whoami 
+  cd  = change Directory
+  cat = displays the content of a file 
+  clear = 
+
+/sbin - contains system binary files [commands]
+=====
+  - contains system binary files [commands]
+    Executed ONLY by priviledge/admin/root users 
+  - adduser simon
+  - passwd simon
+
+IQ: What is the difference between bin and sbin in Linux?: 
+ sbin are binary flies only executable by users 
+   with admin and elevated priviledges 
+ bin files are executable by any user 
+ ls = list the content of a Directory
+
+IQ: Explain how users are categorised in Linux?  ****
+    We have three category of users in Linux:
+
+    1. admin/root user  = super user that runs all commands 
+    2. normal users  = runs executables in /bin 
+    3. system users 
+        Users created when we install certain softwares 
+
+/etc = contains configuration files 
+=====
+  /etc/ssh/sshd_config 
+  /etc/shadow  = detail information about users password 
+  /etc/passwd  = detail information about users 
+     cat /etc/passwd
+ 
+/tmp == temporal Directory 
+============
+
+/opt  = Where softwares and packages are installed
+=====
+lib  = 
+====
+proc 
+=======
+-  meminfo 
+-  cpuinfo 
+var = dynamic files [logs]
+========================== 
+ - /var/lob/messages 
+    sudo cat /var/log/messages
+============
+/
+ls /  
+bin   data  etc   lib    media  opt   root  sbin  sys  usr
+boot  dev   home  lib64  mnt    proc  run   srv   tmp  var
+
+LINUS bASIC cOMMANDS
+
+ls /var/log = list the content of the /var/log directory:
+
+mkdir -v test 
+           -v verbose  (TO MAKE DIRECTORY AND REPORT ITS CREATION)
+-------------------------------------------------------------------------------
+RENAMING YOUR SERVER To MAKE IT EASILY READ:
+
+  sudo hostname "NEW NAME" 
+  eg
+  sudo hostname demo  (it will not change on comand line) we still have 
+  [ec2-user@ip-172-31-83-28 ~]$
+  so to make nae change on comand line?
+  sudo su - ec2-user: 
+  this will now change to your name you gave
+  ---------------------------------------------------------------------
+  mkdir -pv Devops/SDLC/Linux/Jenkins/Git/Maven/Nexus/
+  - p = will create both parent and child Directory
+  - v = verbose mode see comment above
+
+
+  mkdir  Devops/
+  mkdir  Devops/SDLC/
+  mkdir  Devops/SDLC/Linux/
+  mkdir  Devops/SDLC/Linux/Jenkins/
+  mkdir  Devops/SDLC/Linux/Jenkins/Git/
+  mkdir  Devops/SDLC/Linux/Jenkins/Git/Maven/
+  mkdir  Devops/SDLC/Linux/Jenkins/Git/Maven/Nexus/
+Deleting an empty directory:
+   rmdir dirName 
+     rmdir paypal/
+   rm -r dirName
+     rm -r paypal/
+
+[ec2-user@demo ~]$ rmdir class
+rmdir: failed to remove 'class': Directory not empty
+
+Deleting a directory with content:
+   rm -r dirName 
+   rm -rf dirName (FORCE REMOVE)
+
+Deleting all directories that start with a
+   'class' or a 'given pattern'
+   rm -rf class*  
+
+  * = wild card 
+
+Deleting all directories that ends with a
+   'app' or a 'given pattern'
+   rm -rf *app   
+
+cd - = moves you to the  directory you were before ****:{{[]}}:
+
+cd / 
+cd /bin 
+cd /etc
+
+touch coomand:
+touch goals.txt
+echo command: *****
+echo "JESUS IS LORD" > truth.sh  creating a file with info in it truth in any format 
+      (truth .sh, truth.txt. truth .yml)
+echo  DevOps is good > hired
+
+---------------------------------------
+ll or ls -l = long list the content of
+              a directory
+
+ls -lt = long list base on time  
+ls -ltr = long list basll or ls -l = long list the content of
+              a directory
+
+ls -lt = long list base on time  
+ls -ltr = long list base on reverse time
+
+
+
+Why/how are some files hidden
+Important files are hidden 
+ to avoid accidental delete
+  to avoid deleting VIP files mistakenly with 
+      rm -rf class* 
+      use .(filebame)
+  
+we create them using .
+eg
+  mkdir .config 
+  touch .deploy 
+
+
+IQ: How can you desplay hidden files/dirs?:
+   ls -a 
+
+  
+  cat   /etc/shadow
+  sudo cat /etc/shadow
+
+Save and Quit: 
+     type :wq and press enter key to save and quit
+     do a quick double press on the shift+z key  
+       to save and quit 
+            press+hold 'shift key' and type ZZ
+ Quit without saving:  
+     enter command mode          
+     type :q! and press enter key to quit 
+           without saving
+
+cat / tail / head /  less / more
+less: read the contents of a file one page at a time
+more: read the contents of a file showing the proportion read in percentage
+
+MOVING AND COPYING FILES
+------------------------------------------------------------------------------------
+
+cp = copy files [backup]  eg cp test.copy
+cp test /tmp/ = to copy and put in tmp directory
+cp test /tmp/ test.bk = to copy and put in tmp directory with new name as test.bk
+
+mv = rename files/directories  (SAME AS COPY)
+mv  can also rename a fine 
+
+files:
+  mv fileName 
+  cp fileName
+
+directories: 
+  mv dirName can move a directory as cp but cannot copy as same we use
+  
+  cp -r <dirName> to copy directory
+  eg 
+  cp -r devops/taxi (WE ARE MOVING DEVOPS TO RENAME TAXI)
+
+
+ N WORD COUNT ON FILES
+-----------------------------------------------------------------------------------
+file  
+wc  = word counts 
+  wc -l = no of lines 
+  wc -c = no of charesters in a file  
+ln:  link 
+  fileName =  list 
+  ln list list-hard 
+       = hard link  [ln/cp]
+       = copy 
+  ln -s list list-soft 
+       = soft link 
+NOTE: WHEN MAIN FILE IS DELETED, THE SOFTLINK WILL BE BLINKING AS THE CNN FILE IN MY DIRECTORIES

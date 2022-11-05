@@ -1,0 +1,18 @@
+Geostruct-Lab-Organisation
+https://github.com/geostructlab
+
+geostruct team under geostruct-lab-organisations
+https://github.com/orgs/geostructlab/teams/devops-engineers
+
+
+https://github.com/geostructlab/geostuectlab-public-repo
+
+git remote add ta github.com/geostructlab/geostuectlab-public-repo
+
+personal access token :
+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
+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
+
+git diff pa/master 
+
+git merge  pa/master 

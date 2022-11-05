@@ -1,0 +1,1404 @@
+CLASS 4/14/2022
+---------------------------------------------------------------------------------
+DevOps Course:
+ What is DevOps?
+SDLC :
+  Waterfall 
+  Agile 
+  DevOps = Development + Operations 
+  DevOps - Automation 
+  Dev-Sec-Ops - Automation 
+  Dev-Sec-Ops - Development + Security + Operations 
+           Continuous transformation/improvement 
+           CI / Dev--Tested--Deployed---Monitored
+           CD / 
+           CD / 
+           C.DEVT/ 
+           C-M / 
+           C-Testing / 
+           C-Security 
+Is the Present and the Future of modern project management
+ Why DevOps? Automation
+ DevOps Importance -- Automation / speed / high ROI (return on investments)
+ DevOps Model
+ DevOps Life cycle
+ Market Trend and Career Scope for DevOps
+ DevOps Tools
+
+NOTE: TRY TO GO THROUTH THE AWS COURSE RECOMENDED BEFORE AWS COURSE
+
+Linux and Linux commands:
+=========================
+Computers:
+  Laptop 
+  Desktop 
+  workstations 
+  Servers ---- Super Computers 
+Components of a Computer
+   1. Hardware Components = A bare metal 
+        Screen / CPU / Keyboard / Hard disk / RAM / MOUSE
+   2. Software Components
+      1. Operating System
+      2. Anti-Virus  
+      3. Office 
+
+cars Vendors:
+  tesla 
+  toyota
+  GMC  
+Computer Vendors:  hp laptop $900 [hw=600, sw-OS =300]
+  hp --- Your HP laptop is running with a windows OS   
+  dell 
+  lenovo -Your laptop is running with a Linux OS 
+  acer 
+  microsoft 
+  toshiba
+  apple --- Your laptop is running with a MacOS  
+
+Operating Systems: 
+  Windows OS---> License are required (paid for)
+    Windows 7, 8, XP, 10, 11 Home OS 
+    Windows 7, 8, XP, 10, 11 Professional OS 
+    Windows Server 2008, 2012, 2016, 2019 
+  MacOS   --->  
+  Linux OS: free and Open source OS 
+
+     Linux Computers(Servers); 
+
+     ---------------------------------------------------------------------------
+     LINUX COMMANDS:
+     ---------------------------------------------------------------------------
+Operating System (OS) = LINUX OR Windows, Solaris 
+=======================================
+Solaris kernel 
+and Developed the Linux kernel 
+In 1991 Linus was using the Solaris kernel to manage his project
+  Solaris 
+     kernel 
+       Developed LINUX OS from Solaris kernel  
+
+ Solaris is a paid and Licence OS 
+   He contacted the Vendor of Solaris SUN System 
+  ===============================================
+Youtube videos -- Automation with Jenkins and Kubernetes
+Youtube videos -- Automation with Jenkins and Ansible
+   Source code / files are free/ video free   
+
+Open source vs FREE OS 
+Open source: -- both the source codes
+               and the softwares are free 
+Free: --- ONLY the softwares is free  
+Licence technology: softwares is not free
+
+KFC       Coca cola:   GoodChicken (GC) 
+recipe     recipe        Open source 
+
+  ssh-client = ssh = secure shell = 22
+
+
+LINUX         vs      Windows:
+------               ----------
+Open source           Licence
+virus=no              Virus=Yes
+case sensitive        not case sensitive 
+LS =! Ls, lS ls       LS, Ls, lS ls 
+use for backend       workstations 
+backend 80%Linux      20% backend
+MULTI-DESTRIBUTIONS    Single distribution
+ Redhat 
+ CentOS 
+ ubuntu 
+
+------------------------------------------------------------------------------
+ CREATING AND CONNECTING TO A LINUX SERVER :
+----------------------------------------------------------------------------
+Landmark Technologies.
+We host our 90% of our Servers in AWS (Amazon web services)
+We host our 10% of our Servers in GCP (Google cloud platform)
+AWS and GCP  are cloud computing providers/vendors. 
+
+DevOps Engineers:
+  Deploy applications for Ebay clients 
+  These applications are hosted in computers/servers  
+ebay: clients ----->ebay.com[computers]
+
+------------------------------------------------------------------------------
+CREATE AN AWS ACCOUNT:
+-----------------------------------------------------------------------------
+  aws.amazon.com 
+  password: Success@2022 
+  root userName: class28@mylandmarktech.com
+
+Connecting to the Linux Server in AWS:
+  1. We connect into Linux servers using ssh protocol 
+     We connect into Linux servers via ssh on port 22 ****#
+     ssh = secure shell (scured connection) 
+     ssh listens on port 22 **
+  2. We need an ssh-client Software:
+       mobaXterm 
+       puTTy 
+       git-base 
+  3. we need to be authenticated using:
+      userName:  ec2-user
+        password: Success@2022
+        ssh-private-key: class28key.pem (KEY CREATED WITH INSTANCE)
+  4. We need the server's address
+        public-ipAddress =  52.90.194.35
+        private-ipAddress = 172.31.85.226
+        hostName = ebay.com  
+        dns-name 
+ssh -i "class28key.pem" ec2-user@ec2-52-90-194-35.compute-1.amazonaws.com
+
+ssh -i class28key.pem ec2-user@52.90.194.35
+
+   NOTE: ADD MORE NOTE FROM EXERCISE BOOK 001
+
+  --------------------------------------------------------------------------------
+  REVISIONS OF CLASS 4/14/2022 ON CLASS4/16/2022 VID 0:10 TO 0:30   ***** CHANGING YOUR KEY PERMISIONS
+  ----------------------------------------------------------------------------------
+  CONNECTING TO A SERVIER *********
+  --------------------------------------------------------------------------------
+  remote host address: 52.87.248.166
+  ssh-private-key: class28key.pem
+  userName: ec2-user
+
+  commands: -
+            ssh mylandmarktech@52.87.248.166             (using password)
+            ssh -i class28key.pem ec2-user@52.87.248.166 (using key.pem)
+MacOS: Terminal / git-bash
+Windows: mobaXterm/git-bash / puTTy
+
+In you instance in the AWS Account, goto connect and choose SSH client***
+
+
+1. Open an SSH client.
+2. Locate your private key file. 
+   The key used to launch this instance is class28key.pem
+3. Run this command, if necessary, to ensure your key is not publicly viewable.
+       cd Downloads
+       chmod 400 class28key.pem   (FOR ME IS chmod 400 gillygilly1.pem)
+Connect to your instance using its Public DNS:
+ ec2-52-87-248-166.compute-1.amazonaws.com
+Example:
+ ssh -i "class28key.pem" ec2-user@ec2-52-87-248-166.compute-1.amazonaws.com
+
+
+  ---------------------------------------------------------------------------------
+
+  CLASS 4/16/2022 
+  ---------------------------------------------------------------------------------
+MANAGING SERVERS (LINUX OR WINDOWS)
+
+Running tasks or workloads in a server:
+ 1. GUI     = Graphical User Interface 
+              Typing  
+ 2. CLI     = Command Line Interface 
+         mkdir git sonaQube jenkins aws azure  
+ 3. Scripts = List of instructions/commands that automate workloads 
+
+Windows File/Directory Structure
+   c:// = The root Directory [folder] 
+   Files and Folders & sub folders
+     mkdir git sonaQube jenkins aws azure gcp
+Linux File/Directory Structure
+  Files and Directory & sub Directories 
+  Files = Files for Linux/windows
+  Folders = Windows and Directory for Linux
+
+Linux File Structure:
+    /  is the root Directory in Linux servers *##
+
+/home - user's home Directory details 
+======
+ec2-user 
+mylandmarktech 
+simon 
+linux  
+
+/bin = contains binary files [commands]
+=====
+  ls 
+  pwd = print working Directory 
+  whoami 
+  cd  = change Directory
+  cat = displays the content of a file 
+  clear = 
+
+/sbin - contains system binary files [commands]
+=====
+  - contains system binary files [commands]
+    Executed ONLY by priviledge/admin/root users 
+  - adduser simon
+  - passwd simon
+
+IQ: What is the difference between bin and sbin in Linux?: 
+ sbin are binary flies only executable by users 
+   with admin and elevated priviledges 
+ bin files are executable by any user 
+ ls = list the content of a Directory
+
+IQ: Explain how users are categorised in Linux?  ****
+    We have three category of users in Linux:
+
+    1. admin/root user  = super user that runs all commands 
+    2. normal users  = runs executables in /bin 
+
+    3. system users 
+        Users created when we install certain softwares 
+
+/etc = contains configuration files 
+=====
+  /etc/ssh/sshd_config 
+  /etc/shadow  = detail information about users password 
+  /etc/passwd  = detail information about users 
+     cat /etc/passwd
+ 
+/tmp == temporal Directory 
+============
+
+/opt  = Where softwares and packages are installed
+=====
+
+lib  = 
+====
+
+proc 
+=======
+-  meminfo 
+-  cpuinfo 
+
+var = dynamic files [logs]
+========================== 
+ - /var/lob/messages 
+    sudo cat /var/log/messages
+
+============
+/
+ls /  
+bin   data  etc   lib    media  opt   root  sbin  sys  usr
+boot  dev   home  lib64  mnt    proc  run   srv   tmp  var
+
+*************************************************************************************
+LINUX BASIC COMMANDS:
+=====================
+How do you run Linux commands Landmark?
+1. Create a Linux server in AWS Cloud
+2. Connect via ssh into the server 
+   make sure the ssh port 22 is open in the server's firewall
+3. Start running task/workloads using commands.
+Craeting, Navigation and Directory Control Commands: 
+      mkdir = create directory  
+      cd    = directory navigation (SWITCH DIRECTORIES)   
+      ls    = list fil and directories
+      pwd   = where are you located in the server 
+              print/present working Directory 
+
+     ls     = list the content of pwd 
+     ls /   = list the content of the root Directory  
+     ls /tmp = list the content of the tmp directory 
+     ls /var/log = list the content of the /var/log directory
+        cant lis
+
+      mkdir class28
+      mkdir devops
+      mkdir -v test 
+           -v verbose  (TO MAKE DIRECTORY AND REPORT ITS CREATION)
+
+  RENAMING YOUR SERVER To MAKE IT EASILY READ
+
+  sudo hostname "NEW NAME" 
+  eg
+  sudo hostname demo  (it will not change on comand line) we still have 
+  [ec2-user@ip-172-31-83-28 ~]$
+  so to make nae change on comand line?
+  sudo su - ec2-user 
+  this will now change to your name you gave
+
+mkdir class/class1/class2/class3 
+mkdir Devops/SDLC/Linux/Jenkins/Git/Maven/Nexus/
+mkdir -pv Devops/SDLC/Linux/Jenkins/Git/Maven/Nexus/
+  - p = will create both parent and child Directory
+
+
+  mkdir  Devops/
+  mkdir  Devops/SDLC/
+  mkdir  Devops/SDLC/Linux/
+  mkdir  Devops/SDLC/Linux/Jenkins/
+  mkdir  Devops/SDLC/Linux/Jenkins/Git/
+  mkdir  Devops/SDLC/Linux/Jenkins/Git/Maven/
+  mkdir  Devops/SDLC/Linux/Jenkins/Git/Maven/Nexus/
+
+ = tree cannot be found 
+  USE yum install to install apps in linus
+  eg
+ = yum install tree 
+   This command has to be run with superuser privileges (sudo) 
+   (under the root user on most systems)
+   eg 
+   sudo yum install tree
+sudo = permit a user to run commands as another user or superuser 
+
+ sudo yum install tree
+
+[ec2-user@demo ~]$ tree
+.
+├── class
+│   └── class1
+│       └── class2
+│           └── class3
+├── class27
+├── class28
+├── class29
+├── class30
+├── class31
+└── Devops
+    └── SDLC
+        └── Linux
+            └── Jenkins
+                └── Git
+                    └── Maven
+                        └── Nexus
+=========================================
+
+1.  Creating a zoom ACCOUNT
+2.  Creating a zoom meeting to fix issues 
+       Simon Legah is inviting you to a scheduled Zoom meeting.
+
+Topic: Please help
+
+Having issues pacticing the CAT command. 
+Engineers, Please help.
+Join Zoom Meeting
+https://us05web.zoom.us/j/85471080143?pwd=ZzNrbWhoMkxlaytZc3QxNDR1dUpUdz09
+
+Meeting ID: 854 7108 0143
+Passcode: N1PPJh
+
+3. Explain your problem:
+     picture of the issue -- 
+=====================================================================================
+---------------------------------------------------------------------------------
+
+  CLASS 4/21/2022 
+---------------------------------------------------------------------------------
+
+Deleting an empty directory:
+   rmdir dirName 
+     rmdir paypal/
+   rm -r dirName
+     rm -r paypal/
+
+[ec2-user@demo ~]$ rmdir class
+rmdir: failed to remove 'class': Directory not empty
+
+Deleting a directory with content:
+   rm -r dirName 
+   rm -rf dirName (FORCE REMOVE)
+
+Deleting all directories that start with a
+   'class' or a 'given pattern'
+   rm -rf class*  
+
+  * = wild card 
+
+Deleting all directories that ends with a
+   'app' or a 'given pattern'
+   rm -rf *app   
+
+cd  = directory navigation
+ eg cd class (will take u to the class directory)
+
+[ec2-user@demo ~]$ pwd
+pwd = /home/ec2-user
+pwd =  /home/ec2-user/Devops/SDLC/Linux
+
+Moving bacwards on directories
+cd .. 
+cd ../../
+cd - = moves you to the  directory you were before
+
+cd / 
+cd /bin 
+cd /etc 
+
+File management:
+
+  touch fileName 
+  touch list.txt 
+  echo command 
+  echo  DevOps is good
+  echo 'JESUS IS LORD'
+  echo JESUS IS LORD
+  echo "JESUS IS LORD" > truth.sh 
+  echo  DevOps is good > hired
+
+ls = 
+ll or ls -l = long list the content of
+              a directory
+
+ls -lt = long list base on time  
+ls -ltr = long list base on reverse time 
+
+Why/how are some files hidden
+Important files are hidden 
+ to avoid accidental delete
+  to avoid deleting VIP files mistakenly with 
+      rm -rf class* 
+      use .(filebame)
+  
+we create them using .
+eg
+  mkdir .config 
+  touch .deploy 
+
+
+IQ: How can you deplay hidden files/dirs?
+   ls -a 
+
+Path to files/directories:
+  relative path and 
+    starts from  pwd 
+    cat test
+    ls Devops/ 
+  absolute path
+      starts from the root dir (/) 
+    cat /home/ec2-user/test
+    ls /home/ec2-user/Devops/
+
+Reading the content of a file:
+  cat fileName (TO LIST THE CONTENTS OF THE FILES)
+  cat -n fileName (TO LIST WITH PARTICULAR LINE TO DISPLAY)
+  eg 
+  cat -4 test
+  
+  cat test 
+  cat  /etc/passwd 
+      [users details] 
+  cat   /etc/shadow
+  sudo cat /etc/shadow
+        [users password] 
+ monitor.sh file has 1000 lines 
+   head fileName 
+      [display the 1st 10 lines]
+   tail fileName 
+      [display the last 10 lines]
+  tail -1 fileName
+     [displays the last line]
+  tail -4 fileName
+    [displays the last 4 lines]
+
+list :
+ simon 
+ Legah 
+ Paul 
+ John 
+ Peter 
+ James 
+ Tita 
+ Pefok 
+ Linux 
+ Windows 
+ Git 
+ Maven 
+ aws 
+ gcp 
+ mgc 
+ toyota 
+
+Modifying the content of a file:
+  Text editors:
+ Windows:
+    sublime text
+    bracket
+    notepad++
+    vs code 
+    atom 
+    eclipse 
+
+--------------------------------------------------------------------------------------
+Linux:
+  vi/vim editors
+------------------------------------------------------------------------------------
+  nano 
+  vi fileName 
+[ec2-user@demo ~]$ vim tools
+-bash: vim: command not found
+  sudo yum install vim  tree 
+  1. you start accessing the file in command mode 
+     press the 'i' key to enter insert mode 
+     press "esc key" to enter command mode 
+
+ Save and Quit: 
+     type :wq and press enter key to save and quit
+     do a quick double press on the shift+z key  
+       to save and quit 
+            press+hold 'shift key' and type ZZ
+ Quit without saving:  
+     enter command mode          
+     type :q! and press enter key to quit 
+           without saving
+
+-----------------------------------------------------------------------------------
+Project:
+ create a file in using vi and explain your expection
+ in your the DevOps class28 Program.
+
+  Graduation date = September 9, 2022.
+-----------------------------------------------------------------------------------
+
+less fileName 
+       tools
+
+cat / tail / head /  less / more
+less: read the contents of a file one page at a time
+more: read the contents of a file showing the proportion read in percentage
+
+Cat / TAIL / Head /  less / more
+
+ linux is case sensitive all this are different. 
+ cat Dev.txt 
+ cat DEV.txt 
+ cat dev.txt 
+
+Screen1 = Laptop
+screen2 = (external monitor)
+
+5-9 minutes video on how to connect to ext screen
+
+
+MOVING AND COPYING FILES
+------------------------------------------------------------------------------------
+
+cp = copy files [backup]  eg cp test.copy
+cp test /tmp/ = to copy and put in tmp directory
+cp test /tmp/ test.bk = to copy and put in tmp directory with new name as test.bk
+
+mv = rename files/directories  (SAME AS COPY)
+mv  can also rename a fine 
+
+files:
+  mv fileName 
+  cp fileName
+
+directories: 
+  mv dirName can move a directory as cp but cannot copy as same we use
+  
+  cp -r <dirName> to copy directory
+  eg 
+  cp -r devops/taxi (WE ARE MOVING DEVOPS TO RENAME TAXI)
+
+
+ N WORD COUNT ON FILES
+-----------------------------------------------------------------------------------
+file  
+wc  = word counts 
+  wc -l = no of lines 
+  wc -c = no of charesters in a file  
+ln:  link 
+  fileName =  list 
+  ln list list-hard 
+       = hard link  [ln/cp]
+       = copy 
+  ln -s list list-soft 
+       = soft link 
+NOTE: WHEN MAIN FILE IS DELETED, THE SOFTLINK WILL BE BLINKING AS THE CNN FILE IN MY DIRECTORIES
+-------------------------------------------------------------------------------------
+
+Deleting a file in Linux:
+ rm fileName 
+ rm list 
+====================================================================================
+
+------------------------------------------------------------------------------------- 
+CLASS 04/23/2022
+FILE PERMISSIONS/SECURITY:
+-------------------------------------------------------------------------------------
+Folders = Windows = Is a container of files and sub-folders/directories 
+Directories= Linux = Is a container of files and sub-folders 
+Files 
+Diminion Systems =  cnn 
+   mkdir cnn 
+File permissions/security:
+-rw-rw-r--. 1 ec2-user ec2-user 45 Apr 23 08:33 list:  FILE
+lrwxrwxrwx. 1 ec2-user ec2-user  4 Apr 23 08:35 mylist : Link
+drwxrwxr-x. 2 ec2-user ec2-user  6 Apr 23 08:31 news: Directory
+-rw-rw-r--. 2 ec2-user ec2-user 45 Apr 23 08:33 list.hard: 
+1   2       3   4         5     6     7           8
+  Files start with - 
+  directories start with a 'd'
+  symbolic/soft links start with 'l'
+Fields for files:
+  1)  type (-file,)
+  2)  Permissions 
+  3)  Number of links
+  4)  Owner
+  5)  Group Owner
+  6)  Size of the File in Bytes
+  7)  Date and Time of creation
+  8)  File name/Dir Name 
+d rwxrwxr-x. 2 ec2-user ec2-user  6 Apr 23 08:31 news: Directory
+- rw-rw-r--. 2 ec2-user ec2-user 45 Apr 23 08:33 list: 
+- rw-rw-r--. 2 simon developers  45 Apr 23 08:33 news:     
+Permission attributes:
+  Read    - r      = 4   grant read access for a user  
+  Write   - w      = 2   grant write/modify  access for a user
+  Execute - x      = 1   grant access to run the file as a command 
+           Normal Users:
+  Owner     Group             others: 
+  simon     developers        anyone 
+  rw-=6     rw-=6              r--=4    = file = 664 
+  rwx=7     rwx=7              r-x=5    = Dir  = 775
+
+            root User:
+            su - userName [SU = SWITCH USER]
+            su - root
+        Password:
+        [ec2-user@demo cnn]$ sudo su - root
+   sudo permit priviledge users to run commands as other users
+d rwx r-x r-x. 2 root root    6 Apr 23 09:02 cbs
+- rw- r-- r--. 1 root root    0 Apr 23 09:01 deploy.java
+  Owner     Group             others: 
+  root       root              anyone 
+  rw-=6      r--=4              r--=4    = file =  644
+  rwx=7      r-x=5              r-x=5    = dir  =  755
+                  root user        Normal Users:
+                  File  Dir        File     Dir 
+Full Permissions  0666 0777        0666     0777
+Default perm.     0644 0755        0664     0775 
+                  ---- ----        ----     ----
+umask value       0022 0022        0002     0002
+                  ---- ----        ----     ----                  
+umask value set the Default files permissions for users.
+what is the Default file permissions for root and normal users?
+
+For our cnn project all files should carry 644 permissions 
+  Determine the umask value that should be set?
+                          File      Dir:
+  Full Permissions        0666     0777      
+  Expected permissions    0644
+                          -----
+  umask value             0022
+  ---
+
+For our ebay project all files should carry 444 permissions 
+  Determine the umask value that should be set?
+                          File      Dir:
+  Full Permissions        0666     0777      
+  Expected permissions    0444
+                          -----
+  umask value             0222
+  ---
+
+For our news broadcast project all files should carry 600 permissions 
+  Determine the umask value that should be set?
+                          File      Dir:
+  Full Permissions        0666     0777      
+  Expected permissions    0600
+                          -----
+  umask value             0066
+  ---
+For our news project all files should carry 400 permissions 
+  Determine the umask value that should be set?
+                          File      Dir:
+  Full Permissions        0666     0777      
+  Expected permissions    0400
+                          -----
+  umask value             0266
+  ---
+
+For our cbs project all files should carry 0777 permissions.
+  Determine the umask value that should be set? 
+Directories navigation = executable permissions is required   
+
+File permissions/security:
+  How are files permissions modified in Linux?
+     1. By changing umask value =  
+     2. by running the chmod command 
+  chmod: we can add or remove permissions rights & priviledges
+    chmod permissions fileName 
+    chmod 600 app.py 
+        Owner  = 6 = rw- 
+        group  = 0 = ---
+        others = 0 = ---
+        rwx rwx r-x.
+        Owner  = 7 = rwx       7- rwx
+        group  = 7 = rwx       0- ---
+        others = 5 = r-x       0- --- 
+  
+  chown: changing the ownership of files/directories
+    Only the root user can change ownership of files 
+       /bin or /sbin 
+  - rw- --- ---. 1 ec2-user ec2-user 0 Apr 23 09:32 app.py
+  d rwx --- ---. 2 ec2-user ec2-user 6 Apr 23 09:32 test
+    useradd or 
+    adduser simon 
+    sudo chown simon app.py
+    sudo -u simon chown simon app.py
+    chown: changing ownership of 'app.py': Operation not permitted
+    sudo -u root chown simon app.py
+    sudo chgrp simon app.py
+    sudo chown simon:simon test 
+
+  grep: Extract specific patterns from files  
+         /etc/passwd file  with over 1000 user's details 
+      Extract simon's details from the /etc/passwd file 
+      grep simon /etc/passwd 
+
+      cat /etc/passwd = output  
+      grep simon 
+
+  pipe: |
+     cat /etc/passwd | grep simon 
+
+----------------------------------------------------------------------------------
+  IQ: explain the grep and the pipe commands 
+
+  grep: Extract specific patterns from files 
+  pipe: Permits the output of a comand to be an input of another comand.
+        we grep get results then we pipe to present the results
+----------------------------------------------------------------------------------
+  grep
+  sort
+  tr
+    find 
+    find -a
+    find . -empty 
+  sed
+  date 
+  timedatectl list-timezones
+  sudo timedatectl set-timezone "America/New_York"
+
+-------------------------------------------------------------------------------------
+USER MANAGEMENT COMMANDS:
+------------------------------------------------------------------------------------
+ 3 category of users in Linux:
+   1. root user
+         superUser or admin  
+         can run all commands in the server  
+  2. Normal users 
+     Users created by the admin/root
+     can only run binary [/bin] files by Default   
+  3. system users 
+         Created with softwares installations   
+
+ Groups / Users: 10 teams with 200 Team members 
+ app-Server 
+ db-Server 
+ web-Server
+    Directors
+      legah
+    Managers/
+      emma 
+      gloria
+    Engineers 
+      landmark 
+      acho 
+      alu 
+    Developers  
+       babs   
+adduser --- create a user in Linux 
+ useradd --- create a user in Linux
+ groupadd -- create a group in Linux 
+ groupdel -- delete a group in Linux
+    groupadd managers
+    sudo groupadd managers
+    sudo -u root groupadd managers
+      cat /etc/group 
+[ec2-user@demo ~]$ sudo groupadd managers
+[ec2-user@demo ~]$ sudo groupadd class28
+[ec2-user@demo ~]$ sudo groupadd developers
+
+ sudo useradd userName
+ sudo -u root useradd paul 
+   This create the user and her homeDir 
+    paul     = homeDir = /home/paul  = ~ 
+    landmark = homeDir = /home/landmark 
+    ec2-user = homeDir = /home/ec2-user
+   ls /home  
+
+Assigning password to users:
+  passwd userName 
+  sudo -u root passwd landmark
+  sudo passwd landmark 
+     class28    
+
+ /etc/sudoers = 
+  File use to assign sudo, escalated or admin
+   rights/priviledges to users 
+ 
+  sudo vi /etc/sudoers  
+#includedir /etc/sudoers.d
+ec2-user        ALL=(ALL)       NOPASSWD: ALL
+landmark        ALL=(ALL)       NOPASSWD: ALL
+simon           ALL=(ALL)       NOPASSWD: ALL
+
+(THIS IS BEST TO GRANT SUDOERS RIGHT TO USERS WITHOUT TEMPERING WITH THE SUDO FILE)**
+
+Files to consider:
+   /etc/passwd  = users details 
+       cat /etc/passwd
+   /etc/groups  = group details 
+       cat /etc/groups
+   /etc/shadow  = user's password 
+       cat /etc/shadow
+
+
+Project:
+Create the following groups 
+    managers, 
+    developers
+Create the following users and assign passwords:
+    dominion 
+    success 
+
+Assign dominion to the managers group and assign
+success to the developers 
+
+------------------------------------------------------------------------------------
+HOW TO USERS TO GROUPS IN LINUX?
+  useradd 
+  userdel 
+  groupadd
+  groupdel  
+  usermod  = 
+    This modify a user's account in Linux e.g 
+    Add a user to a secondary group
+       usermod -G groupName userName
+  sudo usermod -G managers landmark 
+  Coomand to list/display user's group.
+       id userName      
+
+[landmark@demo ~]$ id landmark
+   uid=1002(landmark) 
+   gid=1005(landmark) groups=1005(landmark)
+
+[landmark@demo ~]$ sudo usermod -G managers landmark
+[landmark@demo ~]$
+[landmark@demo ~]$ id landmark
+ uid=1002(landmark) gid=1005(landmark)
+ groups=1005(landmark),1002(managers)
+
+ ***********************************************************************************
+ASSIGNMENT DONE
+
+sudo groupadd managers
+sudo groupadd class28
+sudo groupadd developers
+sudo groupdel class28
+
+tail -4 /etc/group
+cat /etc/group
+cat /etc/
+
+
+sudo -u root useradd landmark
+sudo -u root useradd paul
+sudo -u root useradd dominion
+sudo -u root useradd success
+
+TO AUTOMATICALLY CHANGE TO ROOT USER ****
+------------------------------------
+
+sudo bash
+
+TO FIND OUT THE USERS CREATED    (ls /home)
+------------------------------
+
+TOO ADD PASWORDS TO USERS
+--------------------------
+sudo -u root passwd landmark        class28  (assigned passwd gil)
+sudo -u root passwd dominion        class28  (assigned passwd gil)
+sudo -u root passwd success         class28  (assigned passwd gil)
+sudo -u root passwd paul
+sudo -u root passwd ec2-user
+
+
+
+sudo vi /etc/sudoers
+sudo tail -4 /etc/shadow
+
+
+USSERMODE  TO ADD USERS TO GROUPS
+---------  ----------------------
+This modify a user's account in Linux e.g 
+Add a user to a secondary group
+usermod -G groupName userName
+
+sudo usermod -G managers dominion
+sudo usermod -G developers success
+
+
+TO KNOW THE GROUP THAT THE USERS BELONGS TO
+--------------------------------------------
+Coomand to list/display user's group. 
+or
+id userName (to get the group it belongs to)
+or lid
+
+id dominion
+id success
+sudo lid success
+sudo lid landmark
+sudo lid dominion
+
+***********************************************************************************
+  
+chage: CHANGE AGE COMAND
+  lid 
+[landmark@demo ~]$ sudo chage landmark
+Changing the aging information for landmark
+Enter the new value, or press ENTER for the default
+        Minimum Password Age [0]:
+        Maximum Password Age [99999]: 7
+        Last Password Change (YYYY-MM-DD) [2022-04-24]:
+        Password Expiration Warning [7]: 3
+        Password Inactive [-1]: 90
+        Account Expiration Date (YYYY-MM-DD) [-1]: 180
+
+eg of change age
+
+chage:  CHANGE AGE COMMAND
+
+sudo change success 
+
+Minimum Password Age [0]:
+        Maximum Password Age [99999]:
+        Last Password Change (YYYY-MM-DD) [2022-04-29]:
+        Password Expiration Warning [7]:
+        Password Inactive [-1]:
+        Account Expiration Date (YYYY-MM-DD) [-1]:
+[ec2-user@ip-172-31-83-28 ~]$
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+ACCESSING THE SERVER  (1:55)
+
+EC2 SERVER: 
+    root user  elevated priviledges  (created along with server)
+    ec2-user elevated priviledges    (created along with server)
+      How can a user [ec2-user] access the server?
+       userName: ec2-user 
+       ssh-private-key: = class28key.pem (using private key) 
+       or
+       password: = class28 
+
+       server's address: public-ip [52.87.248.166]
+ using Password:
+    ssh ec2-user@52.87.248.166
+ using ssh-private-key:
+    ssh -i class28key.pem ec2-user@52.87.248.166
+Passwordless authentication --- :
+ landmark 
+ simon  
+ paul 
+
+How users can access ec2 servers  with password ?
+1. assign password to the user 
+2. Configure password authentication 
+   - sudo vi /etc/ssh/sshd_config
+       allow password authentication 
+         PasswordAuthentication: yes [change from no to yes]
+  - restart the ssh service 
+       sudo systemctl restart sshd     
+
+3.  ssh userName@hostAddress
+    ssh simon@52.87.248.166
+       password = class28 
+
+Files: (TO ACCESS SUDOERS FILES)
+  /etc/ssh/sshd_config   
+    sudo vi /etc/ssh/sshd_config
+  /etc/sudoers 
+    sudo vi  /etc/sudoers
+
+
+  ssh ec2-user@3.90.202.102 (for gil or ma)
+----------------------------------------------------------------------------------
+Asignment: 
+configure servers so we can acess from any computer by creating passwords. 
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+04/28/2022
+
+GRANTING SUDO ACCESS TO USERS:
+  sudo vi  /etc/sudoers or 
+  echo "userName ALL=(ALL) NOPASSWD:ALL" |  tee /etc/sudoers.d/userName
+ add ansible user in the sudoers file:
+  sudo echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
+ add simon's user in the sudoers file:
+  sudo echo "simon  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/simon 
+Allow users to login using password:
+  sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+  sudo service sshd restart  
+  sudo systemctl restart sshd 
+
+
+ ssh simon@54.85.146.233 
+
+ -----------------------------------------------------------------------------------
+SYSTEM RESOURCES COMMANDS:
+ who 
+ w 
+ whoami 
+ users 
+ whereis 
+ date 
+ df 
+ du 
+ hostname
+
+System Resources Commands:
+who : Displays the current users working on the system.
+w : Show who is logged on and what they are doing
+users : Displays a compact list of the users currently logged
+        on the  system.
+whoami : Display the current user info who gave this command
+
+whereis: locate binary file location in the server
+         whereis ls 
+         whereis whereis
+         whereis pwd 
+         whereis touch 
+date : : Print or set the system date and time
+  date 
+  date -s "24 JAN 2022 20:04:40"
+  date -s "28 APR 2022 20:00:00"
+
+How to define/set set-timezones: 
+  timedatectl list-timezones
+  sudo timedatectl set-timezone <your_time_zone>
+  sudo timedatectl set-timezone Africa/Accra
+  sudo timedatectl set-timezone America/New_York
+
+application server:
+  the system is very Important for automation 
+    scheduling an application deployment for 11:55PM EST/EDT 
+
+df - Report file system disk space usage
+     RAM = 8GB, Hard drive space = 500GB SSD 
+server/system/computer/laptop = 
+   create files, directories folders 
+   downloads movies, videos, study materials 
+
+df - 
+$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  953G  922G   31G  97% /
+
+df : Report file system disk space usage
+  df 
+  df -h  ; 
+     where -h = human readable 
+du : Estimate file space usage.
+      tesla 
+      dev  
+      qa 
+      prod 
+      videos --- movie1 
+                 movie2
+                 movie3
+
+du -h 
+
+RAM = 8GB,
+  RANDOM ACCESS MEMORY 
+  IT DETERMINES THE SPEED OF YOUR System/SERVER 
+    memory 
+
+free -h 
+feer -m  = megabytes 
+
+[ec2-user@demo ~]$ free -h
+      total   used        free      shared  buff/cache   available
+Mem:  965M     123M        233M     648K        608M        701M
+Swap: 0B       0B          0B
+
+Swap: 200% of memory and it is extracted from the hard disk 
+
+df -h:
+   /dev/xvda1      9.0G  1.7G  7.4G  18% /
+
+Mem:            10G         9.8G         0.2G
+  applications will either not run or lacks performance 
+Mem:            10G         9.8G         0.2G
+swap:           20G          0 
+  swap memory equals 200% of memory 
+
+  RAM = Random access memory 
+  running applications --> memory optimised 
+
+lscpu 
+lsmem 
+ 
+ HOW CAN A SYSTEM/SERVER BE IDENTIFIED?
+ webServer 
+ remoteHost details:
+    public or private ip address: 54.85.146.233
+       ssh simon@54.85.146.233
+    hostName: webserver 
+       ssh simon@webserver
+    dnsName: www.rbc.com
+       ssh simon@ww.rbc.com  
+
+hostname : Show or set the system host name.
+   hostname  = displays the system's hostname 
+   hostname dbServer  = this will assign the system hostname 
+                        as dbServer 
+   hostname dbServer = only the root user or users with 
+                       admin/sudo access can assign hostname 
+   sudo hostname dbServer
+        hostname webserver 
+
+   ping demo    (u can ping either using the hostname or the public ip adress)
+
+   ping google.com      = dnsName 
+   ping 172.253.122.113 = public ip address
+
+hostname:
+  hostname dbServer
+  hostname  
+
+ifconfig  = display the PRIVATE IP addresses of a server/system 
+    172.31.19.167
+
+curl ifconfig.co  = display the PUBLIC IP addresses of a server/system 
+
+ip a
+
+[ec2-user@dbserver ~]$ hostname -i
+    fe80::832:a4ff:fe8a:91d1%eth0  = ipv6
+                                   128 bites 
+    172.31.19.167 = ipv4  
+     8 + 8  8  8  = 32 bites 
+
+  boa = 500,000 servers [1,000,000 ip address]  (BOA = BANK OF AMERICA)
+
+hostname -i 
+
+lsblk 
+cat 
+
+COMMAND HELPERS: ******
+  man : Display the on-line manual pages.
+    man ls 
+       ls - list directory contents
+    man pwd 
+      pwd - print name of current/working directory
+  info:
+    info ls 
+  help:
+    ls --help 
+  whatis:
+   whatis ls  
+    The whatis command displays a summary line
+    from the  man page for the specified 
+    command in Linux.
+    whatis ls 
+
+
+service
+service sshd status  [Redhat 5/6]  
+service serviceName status  [Redhat 5/6] 
+
+systemctl
+systemctl status sshd [redhat 7/8]
+service sshd status [redhat 7/8]
+
+WE USE SYSTEMCTL TO STOP, START. ANBLE. DISABLE A SERVER ETC
+eg
+systemctl status|stop|start|restart|enable|disable sshd 
+systemctl status|stop|start|restart|enable|disable httpd
+
+systemctl list-unit-files   (will list all services that are running)
+
+uptime: Tells how long the system has been running.
+    uptime 
+        5 years 
+        366 days 
+        15 days 
+  To optimised uptime ---
+last: show listing of last logged in users.
+
+sudo yum install telnet telnet-server -y   (APPS TO MANNAGE THE SERVER)
+(yum install apache or ma)
+-------------------------------------------------------------------------------------
+CLASS 04/30/2022
+
+COPYING FILES FROM ONE SERVER TO ANOTHER  
+ SERVERS WE CAN HAVE       
+     DATABASE SERVER      deServer
+     TOMCAT-APPSERVERR    tomcat-appServer
+     WEBSERVER            webServer
+
+       
+eg copying of info from deServer to deploy Server OR TO TOMCAT APP SERVER
+       dbServer -- redhat8 Linux OS 
+       
+       deploy.java (files )
+  
+   scp deploy.java  appServer    (scp = SECURE COPY FROM ONE SERVER TO ANOTHER)***
+                                 ------------------------
+   scp fileName userName@host 
+with password authentication enabled 
+and passwORD assigned to user:
+   scp deploy.java ec2-user@172.31.15.177:/home/ec2-user
+   ssh ec2-user@172.31.15.177
+
+with ssh-private-key:
+   
+   scp -i key.pem deploy.java ec2-user@172.31.15.177:/home/ec2-user
+   ssh -i key.pem ec2-user@PRIVATE IP 
+   ssh -i key.pem ec2-user@3.93.58.93   (eg OF ACCESING SERVERS USING GIT BASH)**
+                                          ------------------------------------------
+  Deployment server:
+     tomcat-appServer   -- redhat8 Linux OS
+  host: 3.137.159.171
+        172.31.15.177
+  
+  host2: 3.133.151.47
+    ssh simon@3.133.151.47
+        172.31.7.161
+
+  users:
+     ec2-user 
+     tomcat 
+     elvis  
+  
+  scp = secure copy
+     copy files from a Linux server to another and vice-versa  
+
+Configuring password authentication in linux ec2 instances:
+  when we create an ec2 server (instance) in aws 
+  it comes with a private-key for the default user 
+     default users are:
+      RedHat Servers = ec2-user (ssh-private-key and/or password) 
+      ubuntu         = ubuntu
+Configuring password authentication in linux ec2 instances:
+  1. sudo su - to become the root user 
+  2. vim /etc/ssh/sshd_config 
+        change password authentication from no to yes (NOTE: VERY IMPORTANT)
+  3. restart your ssh service or daemon 
+      service sshd restart 
+      [root@appserver ~]# systemctl restart sshd
+
+
+sudo echo "$user  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$user
+
+sudo echo "simon  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/simon
+
+sudo echo "class27  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/class27 
+
+EASY COMMAND TO GRANT ACCESS TO USERS BY PASSING THE MODIFICATION AT SUDOERS FILE 
+(1:13:00)
+-----------------------------------------------------------------------------------
+sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+
+systemctl restart sshd
+
+[root@appserver ~]# yum install vim
+[simon@appserver ~]$ sudo yum install vim
+
+ scp -r devops/  ec2-user@172.31.15.177:/home/ec2-user/
+    copying a directory (scp -r)
+          -----------------------------------------------------------------------
+         NOTE: MUST PasswordAuthentication AND ASIGNED B4 USING KEY OR COPYING      ------------------------------------------------------------------------
+/bin 
+scp 
+clear : Clears the terminal screen.
+cal : Displays a calendar
+wget : The non-interactive network downloader.
+       us to Downloads packages/softwares from the internet 
+
+  yum  = Downloads and install packages 
+     yum install wget tree
+
+        are you sure you want to continue (y/n)  
+       
+tee: : It is command is used to store and view (both at the same time) 
+       the output of any other command.
+
+       cat test.txt > log 
+       cat test.txt | grep simon 
+       cat test.txt | tee 
+
+
+    
+   echo "DevOps is good" > test.txt
+   
+   echo "DevOps is good " | tee test.py
+   
+   cat /etc/passwd > users 
+   
+   cat /etc/passwd | tee users.sh
+
+
+script : This command records your login session in a typescript in the current directory.
+
+ping: The ping command sends ICMP ECHO_REQUEST to network hosts.
+      ping webserver 
+      ping mylandmarktech.com 
+      ping google.com 
+IQ: How can you check and resvolve a server that isn't responding?
+  ping the server 
+  check the Firewall - security group 
+     open ports in the firewall 
+  check the console to make sure the running 
+  df -h 
+  free -m 
+  top 
+  ps 
+
+telnet: 
+ TELNET command is used to communicate with another host with using TELNET protocol.
+ Telnet is a type of client-server protocol that can be used to open a command line on a remote computer, typically a server. Users can utilize this tool to ping a port and find out whether it is open.     
+
+     telnet localhost:8080 
+
+  sudo yum install telnet telnet-server -y
+
+
+history : Displays the recently executed commands .
+
+uname:
+cat /etc/*releases
+
+cat /etc/redhat-release
+
+netstat -tulpn:
+   t = tcp traffic 
+   u = udp traffic 
+   l = listening 
+   p = port 
+   n = number
+   webserver
+  sudo yum install net-tools -y 
+
+  deploying tomcat applications 
+    application port = 8080 
+
+
+watch: Using watch command we can execute the
+         command periodically.
+   gives a floating output 
+   watch ls 
+
+shutdown:
+  init 0  
+      --> gives no warning 
+  shutdown
+     ---> It gracefully  shut dowm the server 
+
+reboot:  init 6 
+   shutdown the server 
+     shutdown
+  only the root user can run this command and 
+  users with superuser privileges
+restart:
+    restart reboot
+reboot:
+
+
+exit : (OR) Ctrl +d (OR) logout
+------------------------------------------------------------------------------------

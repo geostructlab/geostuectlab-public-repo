@@ -1,0 +1,479 @@
+Class 05/15/2022  GIT
+-----------------------------------------------------------------------------
+Git - 9-12 hours
+================
+ Introduction
+ GitHub Administration (Org/Repo/Users/Team Creation)
+ GIT Commands
+ .gitignore file
+ Create Branch
+ Create Tag / Releases
+ Personal Access Token Generation
+ SSH Key Generation
+ Git Branching Strategy
+ Pull Request Creation and Merging
+ Git Hooks
+ README.md file
+ Git Best Practices 
+==============================================
+CNA = PSW 
+=====================
+Linux ----
+    An open source OS    
+    Running tasks in Linux OS using Linux Commands   
+Scripting 
+    script  
+Coding 
+=======
+  codes are generally written by Developers 
+  Developers write codes in languages like:
+    java, javascript, python, nodeJS, PHP, C++, C, REACT.js, .net 
+
+Tesla --- AWARD a $40b 10 YEAR contract to 
+          Landmark Software Solution (LSS)    
+LSS:
+  Developers start coding 
+  Programmers 
+  Software Engineers 
+
+Versions and Versioning i simportant for long or extended contract. 
+  python:  
+    version1 = print('Tesla your best car partners') [1-4 ] 
+    
+    version3 = print('Tesla the best car partners') 
+ROLL-BACK:
+    version4 = print('Tesla your best car partners')
+               print('Tesla the leader of electric cars')
+  bash_shell: echo 'Tesla your best car partners'
+
+   mkdir tesla 
+   touch Tesla/app.py    
+
+Version Control systems:
+  - Local [using your own computer/system]
+       Developers write and save codes in their local-Computers 
+  - Centralised
+  - Distributed
+Git and GitHub
+==============
+GIT: DVCs 
+  Distributed Version Control system: 
+  - Git manage data as snapshots.
+  - It takes a picture of what all your files look like 
+     at that moment and stores 
+    a reference to that snapshot.
+  Benefits: Nearly every operation is local
+            git has data intergrity
+            Git generally only adds data
+
+version1 = print('Tesla your best car partners')
+version2 
+version11
+  ROLL-BACK from:
+    a new version to an old version [v9 to v8]
+
+other DVCs:
+SVN --> Sub Version
+CVS --> Concurrent Version system
+TFS --> Team Foundation Server
+Git --> 90% plus of companies are using GIT   
+
+
+Git --> Distributed Version Control systems. DVCS
+      Source Code Management = SCM:
+        GitHub - MS
+        GitLab
+        BitBucket (Stash) - A
+
+Registration Application:
+  class27 
+  class28 
+  class29 
+
+IQ: As a DevOps Engineer, what are your roles & responsilities in Git?
+Answer:
+  1. Ensure that Developers environments are configured and secured 
+     Create an enabling environment for Developers
+  2. Project Onboarding 
+       Create organisations where applicable 
+       Create repositories in SCM [GitHub] 
+       Create teams in SCM and assign members[Developers, etc.] 
+
+DVC---
+   SCM=GitHub owned by microsoft [99.99999999% ALWAYS AVAILABLE]
+Tesla ---->  
+   https://github.com  
+
+Millions of developers and companies:
+   build, ship, and maintain their software on GitHub
+83+ million Developers
+
+4+ million Organizations
+
+200+ million Repositories
+
+90% Fortune 100
+
+   https://github.com 
+     userName: dominionsystem 
+     Default organisation is dominionsystem  
+
+https://github.com/landmarkdevops28 
+Create a repository: tesla
+
+Public repository:
+   Anyone on the internet can see this repository. 
+   You choose who can commit.
+      https://github.com/landmarkdevops28/tesla
+Private repository:
+   You choose who can see and commit to this repository.  
+     https://github.com/landmarkdevops28/tesla-backed 
+
+3. Create a Team 
+    https://github.com/orgs/landmarkdevops28/teams/tesla-app  
+      tesla-app 
+      tesla_dev  
+
+4. Add users to the team
+
+5. Provide/Grant repo access to the team
+   least privileges to team members   
+
+=====================================================
+Git Installations
+-----------------
+Pre Requisite Software Download/ Registration :
+Install git in Windows   :  
+  Install git bash @ https://git-scm.com/downloads
+
+Install in RedHAT Linux servers:
+    Install git in git -y 
+
+mkdir tesla 
+cd tesla 
+
+Git Commands:
+  git status 
+  git init 
+  git add 
+
+development is virtually managed in:
+  working-area: 
+    codes are Untracked files in RED          
+  staging area: codes  = 
+   codes are tracked and in GREEN    
+      git add .  
+      git add * 
+      git add fileName 
+      git add app.py    
+  localRepo: 
+    git commit -m "first version"
+git --version
+   
+git config --global user.name "Simon Legah"
+git config --global user.email "legah2000@gmail.com"
+git config --global --list
+  Remote-Repo    
+
+git init 
+  git begins track and keep records[versions]
+  of changes made in the codes
+git status 
+git add  
+git commit 
+git log 
+   
+   list all the commits and who committed 
+git show Cid  
+   show all the changes of the commits
+==============================
+When we run "git commit" the code is  
+  moved to the Local repository
+
+git push  -- moves code from localRepo
+             to Remote-Repo 
+
+https://github.com/landmarkdevops28/tesla  
+ta =  https://github.com/landmarkdevops28/tesla  
+git remote add ta https://github.com/landmarkdevops28/tesla  
+
+ AliasName:
+   ta  https://github.com/landmarkdevops28/tesla 
+  daddy ---> simon legah 
+
+To push code to any repository [public or private]
+   You need to be Authenticated and authorise
+
+   userName: dominionsystem
+   password: Password support is depricated   
+   token PAT: xxxxxxxxxxxxddeerrthghj1442514553.  
+
+   git push AliasName branchName  
+   git push ta master 
+
+   to see all the aliases created: git remote -v     
+---------------------------------------------------------------------------------------
+
+CLASS 05/19/2022
+
+
+git 1 & 2 video --- May 15, 2022
+=================================
+https://class27adevops.s3.amazonaws.com/git-1%262-May15-2022
+=======================
+
+
+  working area        staging     localRepo     RemoteRepo[GitHub]    :
+  -----------        -------      ---------     ------------------  
+  Untracked files     git add     git commit    git push 
+    red                green     
+             
+git fetch                           <-------------------
+git merge    
+git pull <------------------------------------------------------
+ 
+git init          = to initialised a git empty repository
+git status        = to track files location
+git log           
+git add           = move files to staging area from working area
+git commit -m     = move files to the local repository FROM STAGING AREA
+                    good commit message for tracking changes/authors 
+
+git commit -m "users list created"
+git push RemoteRepo master 
+
+https://github.com/landmarkdevops28/tesla 
+CREATE AN AliasName FOR THE Remote-Repo
+git remote add AliasName 
+git remote add tesla https://github.com/landmarkdevops28/tesla
+git remote add tt https://github.com/landmarkdevops28/tesla 
+git remote add ta https://github.com/landmarkdevops28/tesla 
+https://github.com/landmarkdevops28/tesla 
+
+git remote -v 
+git push ta master 
+ 
+ git pull ta master
+ git fetch ta master
+
+simon
+   app.py  
+   git pull    
+Paul 
+   app.py and modifies this file    
+
+git diff ta/master 
+
+git merge  ta/master 
+
+ ta/master
+===============
+------------------------------------------------------------------------------------
+APP USED BY PROFESSIONAL PROGRAMMERS MAKING IT EASIY TO CODE AND SAVES TIME
+IDEs – Integrated Development Environment  : 
+    Eclipse  -  open source Java BASED IDE
+    MyEclipse - not
+    NetBeans  OS Heavy
+    Intellij - not
+     Front – End 
+            VS Code
+            Atom 
+   pycharm
+
+   BUT WHILE WORKING WITH THIS FILES, IT CREATES SOME FILES THAT ARE NOT NEEDED
+
+     .classpath
+    .project
+    node_modules
+
+WE CAN USE GIT IGNORE TO IGNORE THEM IN OUR LOCAL REPOSITORY
+WE FORST OF ALL CREATE .git ignore file
+
+what is .gitignore file use for??
+
+  This records files and dirs that shouldn.t be tracked by git  
+touch .classpath .project  && mkdir node_modules  
+Does this also work for any other file that we don't want git to track? YES. 
+
+touch .gitignore
+  ls -a to see the file
+MOVE THE FILES TO THE CREATED BY THE IDEs GITIGNORE FILE
+
+
+git commit -m ".gitignore file created" (TO REGISTER FILE CREATED)
+
+  
+   SUMMARRY
+  git fetch --> It brings changes in the code to the LocalRepo
+  git pull --> It brings changes in the code to the Working area 
+  git clone --> It brings the entire code to the working area 
+  git merge --> use to merge changes on the RemoteRepo with the localRepo
+
+------------------------------------------------------------------------------------
+
+================= 
+Which Atlassian tools have you used in your project?  :
+---------------------------------------------------
+    BitBucket  ---> scm          = GitHub (USED IN LANDMARK)
+    Bamboo --> CI/CD             = Jenkins (USED IN LANDMARK)
+    Jira -->  Ticketing tool =
+    Confluence  --> Documentation  
+
+https://github.com/myLandmark-Technology/td.git
+
+     git remote add td https://github.com/myLandmark-Technology/td.git
+
+  private or public 
+------------------------------------------------------------------------------------
+
+BRANCHING:
+
+IQ: How many branches are you supporting in your projects?
+    Branches are used to create lines of development. 
+    A branch is a line development 
+  We maintain a minimun of 3 branches:
+        development branch  
+           app.java     
+        staging branch  
+           app.java
+        master branch  
+           app.java
+
+  git branch  = list all the branches [lines of development]
+  git branch branchName  = create a new branch     
+  git checkout branchName = switch branches 
+
+git branch dev (CREATING A NEW BRANCH)
+ git checkout branchName (TO SWITCH BRANCH NAMES)
+  git checkout dev (SWITCH TO DEF)
+
+git commit -a -m "dev env deployment"
+git commit -a -m "master deployment"
+ 
+  git merge dev -m "merging" 
+  CONFLICT 
+dev
+   dc1-->dc2  
+master 
+   mc1---mc2  
+  git merge = CONFLICT will occur 
+              resolve manually [vi into the affected files ]
+             
+
+dev
+   dc1-->dc2  
+master 
+   git diff and git merge   
+   mc1---mc2 
+
+IQ: How many environments are you supporting in your projects?
+Environment:
+    development branch deploying to Development ENV 
+    testing branch deploys to  Testing ENV
+    testing branch deploys to  UAT(QA, BA)   ENV
+    MASTER branch code are deployed to  Production
+ 
+  Branches are used to create lines of development. 
+  A branch is a line development 
+
+
+development branch 
+git diff development --> shows differences 
+
+   git merge --> merges differences
+
+   git merge development -m "Changes Reviewed ok"
+
+   git commit -a -m "readme ready for testing"
+
+   git merge development -m "Ready"
+
+   git commit -a -m "merging issues fixed"
+
+   git push origin --all 
+
+   git push origin master 
+   git push origin stage 
+   git push origin development
+
+   
+--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+CLASS 05/21/2022
+
+5/21/2022
+ 
+stage branch:
+  sc1-->sc2-->sc3-->sc4 
+
+master branch:
+  we need to compare, review and merge the changes in one branch
+  to another use:  
+  git diff  branchName 
+  git merge
+     sc1-->sc2-->sc3-->sc4  = mc1  
+  git rebase 
+     sc1-->sc2-->sc3-->sc4
+          = mc1-->mc2--->mc3-->mc4   
+  git cherry-pick  c-ID 
+  git cherry-pick 5aae370cb
+  git cherry-pick  03f5ade9
+    
+    03f5ade9
+    a76e954
+    5b470d2
+    
+git r
+
+git branch development 
+git branch stage  
+git branch -d dev
+
+origin is the default AliasName created by git   
+git push ta --all 
+   git push ta --all 
+   git push ta master 
+   git push ta stage 
+   git push ta development
+
+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
+Tesla:
+
+Using Jira -- ticket 145 is created to remove bugs    
+Tesla:
+  simon  
+  Landmark
+    ---> git clone https://github.com/landmarkdevops28/tesla        
+
+ create a bug_fix branch
+ git branch bug_fix_landmark_145 
+
+Tesla:  
+  add a new feature to Tesla-phone application 
+ Using Jira -- ticket 155 is created to add new features    
+
+ new branch:  feature_landmark_155  
+
+
+ pull Requests  
+ merging    
+
+tag:
+What is the difference between Git & Github:
+Git is an open source Distributed Version Control System(DVCS) which records
+changes made to files (codes) laying emphasis on speed, data integrity in a
+distributed non-linear workflows.  
+
+SCM:
+Github is a hosted  repo (UI)  for git or an open source SCM tools  
+gitLab 
+bitBucket
+codeCommit
+git log  :
+ Head is a pointer that points to the current branch and latest commit.  
+
+
+git tag 
+
+
