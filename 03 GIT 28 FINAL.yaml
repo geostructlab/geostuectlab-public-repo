@@ -530,8 +530,16 @@ git log  :
  Head is a pointer that points to the current branch and latest commit.  
 
 
-git tag 
+git tag [TagName]
 ====tag
+#TAGS ARE GENERALLY CREATED FROM THE MASTER BRANCH
+Tags are a fundamental building block in git; branches aren't. Git performs 
+checks to make sure tags remain constant, never change, once created pointing 
+at a commit. A branch on the other hand is a mere reference or pointer to a 
+commit, and it can be updated to point at a different commit freely.
+#Like creating a release, like Pakaging the file, 
+# the can also be pushed to the remote repo. 
+
 difference b/w tags and branches :
 === Tags                     ==Branch
 immutable                    mutable
