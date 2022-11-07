@@ -1,0 +1,12 @@
+
+#Difference between Testing and UAT (Users Aceptance and testing)
+UAT is a live, public environment that is synchronized with 
+production deployments but with a different data load to allow 
+users to play around with the software. We refer to it as a 
+Sandbox environment for users. Staging is a private place to test
+ deployment and infrastructure changes before running them in 
+ Production and UAT.
+
+ development -----> development
+ staging     -----> UAT-----> QA
+ Master      -----> Production

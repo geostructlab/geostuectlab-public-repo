@@ -217,7 +217,7 @@ git remote -v  :
    ta  ----> https://github.com/landmarkdevops28/tesla 
   daddy ---> simon legah 
 
-git push  [remote] [branch name]:  (remote can be replaced with AliasName (ta))
+git push  [remote] [branch name]:  #(remote can be replaced with AliasName (ta))
     moves code from localRepo to Remote-Repo 
     Save all commits to the remote repository
     To push code to any repository [public or private]
@@ -310,7 +310,7 @@ IDEs – Integrated Development Environment  :
             Atom 
    pycharm
 
- BUT WHILE WORKING WITH THIS FILES, IT CREATES SOME FILES THAT ARE NOT NEEDED
+ # BUT WHILE WORKING WITH THIS FILES, IT CREATES SOME FILES THAT ARE NOT NEEDED
 mkdir tesla
 
      .classpath
@@ -362,6 +362,7 @@ IQ: How many branches are you supporting?
 
     use to merge changes on the RemoteRepo with the localRepo
 
+BRANCHING:
 IQ: How many branches are you supporting in your projects?
     Branches are used to create lines of development. 
     A branch is a line development 
@@ -404,7 +405,7 @@ IQ: How many environments are you supporting in your projects?
 Environment:
     development branch deploying to Development ENV 
     testing branch deploys to  Testing ENV
-    testing branch deploys to  UAT(QA, BA)   ENV
+    testing branch deploys to  UAT(QA, BA)   ENV #IS THIS SAME AS STAGING BRANCH
     MASTER branch code are deployed to  Production
  
   Branches are used to create lines of development. 
@@ -441,12 +442,12 @@ master branch:
   we need to compare, review and merge the changes in one branch
   to another use:  
   git diff  branchName 
-  git merge
+  git merge  # 
      sc1-->sc2-->sc3-->sc4  = mc1  
-  git rebase 
+  git rebase  # MERGE CHANGES IN ONE BRANC TO ANOTHER IN DIFFERENT VERSIONS AS IT OCCURED
      sc1-->sc2-->sc3-->sc4
           = mc1-->mc2--->mc3-->mc4   
-  git cherry-pick  c-ID 
+  git cherry-pick  commit-ID # TO COMMIT ONLY SOME OF THE CHANGES MADE IN THE CODE
   git cherry-pick 5aae370cb
   git cherry-pick  03f5ade9
     
@@ -460,8 +461,13 @@ git branch development
 git branch stage  
 git branch -d dev
 
-origin is the default AliasName created by git   
-git push ta --all 
+
+git push origin --all 
+   git push origin master 
+   git push origin stage 
+   git push origin development
+# origin is the default AliasName created by git BUT YOU CAN CREATE YIURS JUST AS TA
+git push ta --all # TO PUSH TO ALL THE BRANCHES AT ONCE
    git push ta --all 
    git push ta master 
    git push ta stage 
