@@ -476,26 +476,46 @@ git push ta --all # TO PUSH TO ALL THE BRANCHES AT ONCE
 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
 Tesla:
 
-Using Jira -- ticket 145 is created to remove bugs    
+Using Jira -- ticket 145 is created to remove bugs    :
 Tesla:
   simon  
   Landmark
     ---> git clone https://github.com/landmarkdevops28/tesla        
 
- create a bug_fix branch
+ create a bug_fix branch  
  git branch bug_fix_landmark_145 
+ #Bug-fix branch can be created from the master branch
+ #to fix bugs
 
-Tesla:  
-  add a new feature to Tesla-phone application 
- Using Jira -- ticket 155 is created to add new features    
+Tesla:
+add a new feature to Tesla-phone application 
+Using Jira -- ticket 155 is created to add new features    
 
  new branch:  feature_landmark_155  
+ # with this, we create a feature branch for the new features
 
+# All new branches created on the process should have
+    Working Area
+    Stagine area
+    LocalRepo
+    RempteRepo
+   # Mostly, the new branches are created from the master Branch. 
 
- pull Requests  
+ pull Requests  : *****
+  # A pull request is a request to the maintainer of a repository to pull in some code.
+  When you write some code that you want to contribute to a repository, you create and 
+  submit a pull request. Your code contains some proposed changes to the target repository.
+  A pull request is your way of offering these changes to the maintainer of the repository. 
+  It gives the repository maintainers an opportunity to review the changes and either accept 
+  them, reject them, or ask for more changes
+ 
  merging    
 
-tag:
+git tag:
+#what are tags
+# What is the difference between tags and branches 
+
+
 What is the difference between Git & Github:
 Git is an open source Distributed Version Control System(DVCS) which records
 changes made to files (codes) laying emphasis on speed, data integrity in a
@@ -578,9 +598,9 @@ git 4 Running notes
 ======================
 
 
-ake sure that your working tree is clean 
+make sure that your working tree is clean 
 
-Conflict = dev / stage / masteZZr  
+Conflict = dev / stage / master  
 
 git stash       =     to take backup
 git stash  list
@@ -727,6 +747,10 @@ Git Best Practices:
     Try to use git commands rather than GUI tools.
     use ssh url and PAT over https 
     use rebase over git merge
+    git branching strategy and security:
+    Developers should not/can't
+     commit code directly to the master or main branch
+    
 
 =====================================================   
 HTTP Status Codes:
